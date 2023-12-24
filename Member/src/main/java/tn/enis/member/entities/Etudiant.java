@@ -10,7 +10,7 @@ import java.util.Date;
 @Getter
 @Setter
 @NoArgsConstructor
-@DiscriminatorValue("etd")
+@DiscriminatorValue("etudiant")
 public class Etudiant extends Member{
 
     @ManyToOne
@@ -26,9 +26,9 @@ public class Etudiant extends Member{
 
     @Builder
     public Etudiant( String cin, String nom, String prenom, Date dateNaissance, String cv,
-                     String email, String password, Date dateInscription, String sujet, String
+                      Date dateInscription, String sujet, String
                              diplome, EnseignantChercheur encadrant) {
-        super( cin, nom, prenom, dateNaissance, cv, email, password);
+        super( cin, nom, prenom, dateNaissance, cv);
         this.dateInscription = dateInscription;
         this.sujet = sujet;
         this.diplome = diplome;

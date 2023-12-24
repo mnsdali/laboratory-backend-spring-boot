@@ -7,6 +7,7 @@ import jakarta.persistence.MapsId;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import tn.enis.member.beans.OutilBean;
 
 @Entity
 @Data
@@ -18,4 +19,5 @@ public class Member_Outil {
     @ManyToOne
     @MapsId("user_id")
     private Member user;
+
 }

@@ -29,17 +29,17 @@ public class OutilApplication implements CommandLineRunner{
 
 	@Override
 	public void run(String... args) throws Exception {
-        Outil out1 = Outil.builder()
-                .date(new Date())
-                .source("Source 1")
-                .build();
-
-        Outil out2 = Outil.builder()
-                .date(new Date())
-                .source("Source 2")
-                .build();
-
-        outilrepository.save(out1);
-        outilrepository.save(out2);
+//        Outil out1 = Outil.builder()
+//                .date(new Date())
+//                .source("Source 1")
+//                .build();
+//
+//        Outil out2 = Outil.builder()
+//                .date(new Date())
+//                .source("Source 2")
+//                .build();
+//
+//        outilrepository.save(out1);
+//        outilrepository.save(out2);
     }
 }

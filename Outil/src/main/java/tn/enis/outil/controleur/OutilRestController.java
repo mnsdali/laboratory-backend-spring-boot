@@ -16,27 +16,27 @@ public class OutilRestController {
 	@Autowired
     IOutilService outilService; // Use the Outil service interface.
 
-	@RequestMapping(value = "/outils", method = RequestMethod.GET)
+	@RequestMapping(value = "/tools", method = RequestMethod.GET)
 	public List<Outil> findOutils() {
 		return outilService.findAll();
 	}
 
-	@GetMapping(value = "/outils/{id}")
+	@GetMapping(value = "/tools/{id}")
 	public Outil findOneMemberById(@PathVariable Long id) {
 		return outilService.findOutil(id);
 	}
 
-	@PostMapping(value = "/outils/save")
+	@PostMapping(value = "/tools/create")
 	public Outil addOutil(@RequestBody Outil p) {
 		return outilService.addOutil(p);
 	}
 
-	@DeleteMapping(value = "/outils/{id}")
+	@DeleteMapping(value = "/tools/{id}/delete")
 	public void deleteOutil(@PathVariable Long id) {
 		outilService.deleteOutil(id);
 	}
 
-	@PutMapping(value = "/outils/update/{id}")
+	@PutMapping(value = "/tools/{id}/update")
 	public Outil updateOutil(@PathVariable Long id, @RequestBody Outil p) {
 		p.setId(id);
 		return outilService.updateOutil(p);

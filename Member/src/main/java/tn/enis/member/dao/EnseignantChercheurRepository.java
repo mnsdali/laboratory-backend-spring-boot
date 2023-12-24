@@ -10,4 +10,5 @@ public interface EnseignantChercheurRepository extends
         JpaRepository<EnseignantChercheur, Long> {
     List<EnseignantChercheur> findByGrade(String grade);
     List<EnseignantChercheur>findByEtablissement(String etablissement);
+
 }

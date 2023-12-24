@@ -10,8 +10,9 @@ public interface MemberRepository extends JpaRepository<Member,Long>
 
     Member findByCin(String cin);
     List<Member> findByNomStartingWith(String caractere);
-    Member findByEmail(String email);
 
     List<Member> findByNom(String nom);
+
+
 
 }

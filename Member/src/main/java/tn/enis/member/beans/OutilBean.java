@@ -14,6 +14,8 @@ public class OutilBean {
     @JsonProperty("id")
     private Long id;
 
+    @JsonProperty("nom")
+    private Long nom;
     @JsonProperty("date")
     @Temporal(TemporalType.DATE)
     private Date date;

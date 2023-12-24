@@ -31,7 +31,10 @@ public class Outil{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    
+
+    @NonNull
+    private String nom;
+
     @Temporal(TemporalType.DATE)
     private Date date;
     

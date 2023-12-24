@@ -31,6 +31,9 @@ public class OutilService implements IOutilService {
         Outil outil = (Outil) outilRepository.findById(id).get();
         return outil;
     }
+    public List<Outil> findOutilByNom(String nom){
+        return outilRepository.findByNom(nom);
+    }
 
     public List<Outil> findAll() {
         return outilRepository.findAll();

@@ -13,6 +13,6 @@ public interface IOutilService {
     public Outil findOutil(Long id);
     public List<Outil> findAll();
     public Outil findBySource(String source);
-
+    public List<Outil> findOutilByNom(String nom);
     public List<Outil> findBySourceStartingWith(String source);
 }

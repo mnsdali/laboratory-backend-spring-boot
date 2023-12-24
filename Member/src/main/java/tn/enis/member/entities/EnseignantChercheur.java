@@ -4,16 +4,17 @@ import jakarta.persistence.DiscriminatorValue;
 import jakarta.persistence.Entity;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
-import lombok.Builder;
-import lombok.NoArgsConstructor;
-import lombok.NonNull;
+import lombok.*;
 
 import java.util.Date;
 import java.util.List;
 
-@NoArgsConstructor
+
 @Entity
-@DiscriminatorValue("ens")
+@Getter
+@Setter
+@NoArgsConstructor
+@DiscriminatorValue("enseignant")
 public class EnseignantChercheur extends Member{
 
     @NonNull
@@ -24,9 +25,9 @@ public class EnseignantChercheur extends Member{
 
     @Builder
     public EnseignantChercheur(String cin, String nom, String prenom, Date dateNaissance, String cv,
-                               String email, String password, String grade ,String  etablissement ){
+                               String grade ,String  etablissement ){
 
-        super( cin, nom, prenom, dateNaissance, cv, email, password);
+        super( cin, nom, prenom, dateNaissance, cv);
         this.grade = grade;
         this.etablissement =etablissement ;
 

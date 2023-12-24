@@ -16,9 +16,13 @@ public class EvenementBean {
     private Long id;
     @JsonProperty("titre")
     private String titre;
-    @JsonProperty("date")
+    @JsonProperty("dateDebut")
     @Temporal(TemporalType.DATE)
-    private Date date;
-    @JsonProperty("lien")
+    private Date dateDebut;
+
+    @JsonProperty("dateFin")
+    @Temporal(TemporalType.DATE)
+    private Date dateFin;
+    @JsonProperty("lieu")
     private String lieu;
 }

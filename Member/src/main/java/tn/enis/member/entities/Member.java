@@ -9,10 +9,11 @@ import tn.enis.member.beans.PublicationBean;
 import java.io.Serializable;
 import java.util.Collection;
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
-@DiscriminatorColumn(name= "type_mbr", discriminatorType = DiscriminatorType.STRING,length = 3)
+@DiscriminatorColumn(name= "role", discriminatorType = DiscriminatorType.STRING, length=10)
 @Getter @Setter
 @NoArgsConstructor
 @AllArgsConstructor
@@ -35,17 +36,14 @@ public abstract class Member implements Serializable {
     private byte[] photo;
     @NonNull
     private String cv;
-    @NonNull
-    private String email;
-    @NonNull
-    private String password;
 
+    @Transient
+    private  Collection<EvenementBean> events;
     @Transient
     Collection<PublicationBean> pubs;
     @Transient
     Collection<OutilBean> outils;
-    @Transient
-    Collection<EvenementBean> events;
+
 //plus génération des getters et setters
 
 }

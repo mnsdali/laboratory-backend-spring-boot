@@ -10,12 +10,12 @@ import tn.enis.outil.entities.Outil;
 public interface OutilRepository extends JpaRepository<Outil, Long> {
   
 
+    List<Outil> findByNom(String nom);
 
     // Find an Outil by its source
     Outil findBySource(String source);
    
 	public List<Outil> findBySourceStartingWith(String source);
-    
     
 
 
